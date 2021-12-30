@@ -9,7 +9,9 @@ const AppTodoForm = ({param, addTask = () => {}}) => {
 
     const submitTask = event => {
         event.preventDefault();
-        addTask(inputState.trim());
+        if(inputState.trim()){
+            addTask(inputState.trim());
+        }
         cangeInputState('');
     };
 
